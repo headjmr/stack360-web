@@ -1,0 +1,34 @@
+# Stack360
+
+> Stack360 is the PE Technology Insights Platform. It sits at the intersection of private
+> equity operating partners and portfolio CIOs, revealing how technology investment translates
+> into EBITDA and growth, and giving both sides one secure place to benchmark technology
+> maturity by industry sector, surface risk, drive synergies, and act on AI-assisted plans.
+
+## What Stack360 is
+- A technology intelligence platform purpose-built for private equity and its portfolio-company CIOs.
+- Scores every company across 5 domains (AI & Automation, Data Foundation, Technology Foundation, Cyber Posture, IT Talent & Team) and 16 pillars.
+- Each domain earns a maturity tier: Deficit, Developing, Advancing, Mastery, Trailblazer (shown to PE as Distressed → Compounding). A company can reach Mastery or Trailblazer in any single domain.
+- Quantifies realised EBITDA value created through technology, on the record, so PE partners can see technology value rather than guess at it.
+
+## Who it is for
+- PE operating partners: one common language across the portfolio; a central, secure hub for benchmarking, value capture, collaboration and synergy.
+- Portfolio CIOs: accelerate roadmaps, benchmark maturity against their industry sector each quarter, surface risk early, and evidence their team's realised EBITDA value.
+
+## How it works
+- Assessment across 112 questions produces TechIQ (technology maturity) and CapabilityIQ (sector-specific business capabilities), synthesised at portfolio level as PortfolioIQ.
+- Automatic risk flags, cross-portfolio Patterns → Suggested Plays, and an AI layer (Ask Stack360 + AI Analyser) that is permission-scoped, read-only and cited.
+- Security by design: tenant isolation and information barriers so CIOs see only their own company and partners see only their own portfolio.
+
+## Key pages
+- [Home](https://stack360.ai/): what Stack360 is, who it is for, the product, Founding Partner programme.
+
+## Founding Partners
+- Currently open to three Founding Partner private equity firms on preferential, locked terms. Full enterprise pricing is not yet public. Firms can get in touch to see if they qualify.
+
+## Company
+- Operated by Stack360 LLC, registered in Delaware, USA (2026).
+- Company LinkedIn: https://www.linkedin.com/company/stack360-ai/
+
+## Contact
+- Email: info@stack360.ai

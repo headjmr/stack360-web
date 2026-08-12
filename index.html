@@ -74,9 +74,9 @@ h1,h2,h3{font-family:var(--fd);font-weight:600;letter-spacing:-.01em;line-height
 .logo{display:flex;align-items:center;gap:11px;}
 .mark{width:33px;height:33px;border-radius:50%;background:radial-gradient(120% 120% at 30% 25%,#1c2536,#0f141d);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(198,162,76,.35);}
 .mark s{font-family:var(--fd);font-style:italic;font-weight:600;font-size:19px;color:var(--gold);line-height:1;text-decoration:none;}
-.wm{font-family:var(--fb);font-weight:700;font-size:19px;letter-spacing:-.005em;color:var(--ink);}
+.wm{font-family:var(--fb);font-weight:700;font-size:24px;letter-spacing:-.03em;color:var(--ink);}
 .wm .g{color:var(--gold-deep);}
-.wm sup{font-size:9px;font-weight:600;top:-.9em;margin-left:1px;}
+.wm sup{font-size:11px;font-weight:600;top:-.9em;margin-left:1px;}
 .on-dark .wm,.dark .wm,footer .wm{color:#fff;} .on-dark .wm .g,.dark .wm .g,footer .wm .g{color:var(--gold-b);}
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);}
 .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
@@ -96,7 +96,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdro
 .hero .trust{margin-top:26px;font-size:13px;color:#8b93a3;display:flex;align-items:center;gap:9px;}
 .hero .trust svg{width:15px;height:15px;color:var(--gold-b);}
 .heroart{position:relative;}
-.heroart .frame{transform:perspective(1400px) rotateY(-11deg) rotateX(3deg);}
+.heroart .heroimg img{width:100%;display:block;border-radius:16px;filter:drop-shadow(0 40px 70px rgba(0,0,0,.55));}
 .heroart .badge{position:absolute;left:-18px;bottom:26px;background:#fff;color:var(--ink);border-radius:12px;padding:11px 15px;box-shadow:0 22px 50px -18px rgba(0,0,0,.55);}
 .heroart .badge .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700;}
 .heroart .badge .v{font-family:var(--fd);font-size:22px;font-weight:600;color:var(--green-deep);}
@@ -124,31 +124,18 @@ section{padding:76px 0;}
 .badgewrap{background:linear-gradient(180deg,#ffffff,#fbf9f3);border:1px solid var(--line);border-radius:20px;padding:36px 24px 30px;box-shadow:0 24px 50px -30px rgba(11,15,22,.4);}
 .badgegrid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px 8px;}
 .badge{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;}
-/* --- challenge-coin medallions --- */
-.coin{position:relative;width:90px;height:90px;border-radius:50%;padding:5px;isolation:isolate;
-  box-shadow:0 16px 26px -12px rgba(11,15,22,.55),0 2px 5px rgba(11,15,22,.18),inset 0 2px 3px rgba(255,255,255,.6),inset 0 -4px 7px rgba(0,0,0,.30);
-  transition:transform .18s ease,box-shadow .18s ease;}
-.badge:hover .coin{transform:translateY(-3px) rotate(-2deg);box-shadow:0 22px 34px -14px rgba(11,15,22,.6),0 3px 6px rgba(11,15,22,.2),inset 0 2px 3px rgba(255,255,255,.6),inset 0 -4px 7px rgba(0,0,0,.30);}
-.coin .face{position:relative;width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;
-  box-shadow:inset 0 2px 5px rgba(0,0,0,.32),inset 0 -2px 4px rgba(255,255,255,.45);}
-.coin .face::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;
-  background:radial-gradient(66% 52% at 32% 22%,rgba(255,255,255,.7),rgba(255,255,255,0) 62%);}
-.coin .emblem{width:42px;height:42px;position:relative;z-index:1;}
-.coin .g1,.coin .g2{position:absolute;border-radius:50%;z-index:2;pointer-events:none;background:radial-gradient(circle,#fff,rgba(255,255,255,0) 68%);}
-.coin .g1{width:13px;height:13px;top:11px;right:18px;}
-.coin .g2{width:7px;height:7px;bottom:19px;left:16px;opacity:.8;}
-.coin.gold{background:conic-gradient(from 140deg,#7d5410,#f4dd97,#b9891f,#fff6d5,#9c7422,#e8c977,#7d5410,#f4dd97,#7d5410);}
-.coin.gold .face{background:radial-gradient(circle at 38% 30%,#fdeec0,#dcb85f 52%,#a97e26);}
-.coin.gold .emblem{color:rgba(74,52,10,.80);filter:drop-shadow(0 1px 0 rgba(255,247,205,.7));}
-.coin.ms{background:conic-gradient(from 140deg,#666c74,#eef2f6,#9aa1ab,#ffffff,#7c828c,#d6dbe1,#666c74,#eef2f6,#666c74);}
-.coin.ms .face{background:radial-gradient(circle at 38% 30%,#fbfcfe,#cfd5dd 52%,#8c929b);}
-.coin.ms .emblem{color:rgba(58,64,73,.74);filter:drop-shadow(0 1px 0 rgba(255,255,255,.8));}
-.coin.tb::before{content:"";position:absolute;inset:-5px;border-radius:50%;z-index:-1;
-  background:conic-gradient(from 0deg,#ffd1e8,#c9f0ff,#d4ffe0,#fff2c4,#e8d1ff,#ffd1e8);filter:blur(4px);opacity:.55;}
-.badge .dn{font-size:12px;font-weight:700;color:var(--ink);line-height:1.25;}
-.badge .dt{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:2.5px 9px;border-radius:20px;}
-.badge .dt.tb{color:var(--gold-deep);background:rgba(198,162,76,.15);}
-.badge .dt.ms{color:#5c6570;background:rgba(120,130,140,.15);}
+/* --- domain medallions --- */
+.medal{position:relative;width:96px;height:96px;transition:transform .18s ease;}
+.badge:hover .medal{transform:translateY(-3px);}
+.medal .star{position:absolute;left:50%;top:-8px;transform:translateX(-50%);z-index:4;color:#e9c96a;filter:drop-shadow(0 1px 1px rgba(0,0,0,.35));}
+.medal .ring{position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(var(--lt) 0deg 6deg,var(--dk) 6deg 12deg);box-shadow:0 14px 26px -12px rgba(11,15,22,.55),0 2px 4px rgba(11,15,22,.25);}
+.medal .bezel{position:absolute;inset:7px;border-radius:50%;background:conic-gradient(from 210deg,var(--dk),var(--lt),var(--base),var(--lt),var(--dk));}
+.medal .face{position:absolute;inset:13px;border-radius:50%;background:radial-gradient(circle at 36% 30%,var(--lt),var(--base) 52%,var(--dk));box-shadow:inset 0 2px 5px rgba(0,0,0,.35),inset 0 -2px 4px rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;}
+.medal .face::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);}
+.medal .glint{position:absolute;width:15px;height:15px;top:12px;right:19px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.85),transparent 68%);}
+.medal .emb{width:40px;height:40px;position:relative;z-index:1;color:#fff;opacity:.96;filter:drop-shadow(0 1px 1px rgba(0,0,0,.35));}
+.badge .dn{font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.2;}
+.badge .dt{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:20px;color:#fff;}
 .badgenote{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.55;}
 .badgenote b{color:var(--gold-deep);}
 .mentors{margin-top:20px;font-size:15px;color:var(--ink);line-height:1.55;}
@@ -262,7 +249,7 @@ footer a:hover{color:#fff;}
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top"><span class="wm">Stack<span class="g">360</span><sup>™</sup></span></a>
-    <nav class="navlinks"><a href="#platform">Platform</a><a href="#audience">Who it's for</a><a href="#how">How it works</a><a href="#insights">Insights</a><a href="#pricing">Pricing</a></nav>
+    <nav class="navlinks"><a href="#platform">Platform</a><a href="#audience">Who it's for</a><a href="#how">How it works</a><a href="#insights">Insights</a><a href="#pricing">Founding Partners</a></nav>
     <div class="navcta"><a class="login" href="#">Log in</a><a class="btn pri" href="#contact">Book a demo</a></div>
   </div>
 </header>
@@ -278,7 +265,7 @@ footer a:hover{color:#fff;}
       <div class="trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Built for the most sensitive data in the room: tenant-isolated and information-barrier enforced.</div>
     </div>
     <div class="heroart">
-      <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/assets/quadrant.webp" alt="Stack360 PortfolioIQ: the Maturity by Value quadrant across a private equity portfolio"/></div>
+      <div class="heroimg"><img src="/assets/hero-heatmap.webp" alt="Stack360 portfolio heat map: mastery and risk by domain across a private equity portfolio"/></div>
       <div class="badge"><div class="k">Realised EBITDA value</div><div class="v">$4.30M</div></div>
     </div>
   </div>
@@ -308,24 +295,44 @@ footer a:hover{color:#fff;}
     <div class="badgewrap">
       <div class="badgegrid">
         <div class="badge">
-          <span class="coin gold tb"><span class="g1"></span><span class="g2"></span><span class="face"><svg class="emblem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 4.9L18.5 9l-4.8 1.6L12 15.5 10.3 10.6 5.5 9l4.8-1.6z"/><path d="M18.4 15l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6z"/></svg></span></span>
-          <div class="dn">AI</div><div class="dt tb">Trailblazer</div>
+          <div class="medal" style="--base:#3f7fd0;--lt:#79aff0;--dk:#22508f">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.6 20 12 16.4 6.4 20 8 13.4 3 9l6.4-.7z"/></svg>
+            <div class="ring"></div><div class="bezel"></div>
+            <div class="face"><span class="glint"></span><svg class="emb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 4.9L18.5 9l-4.8 1.6L12 15.5 10.3 10.6 5.5 9l4.8-1.6z"/><path d="M18.4 15l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6z"/></svg></div>
+          </div>
+          <div class="dn">AI</div><div class="dt" style="background:#3f7fd0">Trailblazer</div>
         </div>
         <div class="badge">
-          <span class="coin ms"><span class="g1"></span><span class="g2"></span><span class="face"><svg class="emblem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c3.9 0 7 1.3 7 2.9S15.9 9.3 12 9.3 5 8 5 6.4 8.1 3.5 12 3.5z"/><path d="M5 6.4v11.2c0 1.6 3.1 2.9 7 2.9s7-1.3 7-2.9V6.4"/><path d="M5 12c0 1.6 3.1 2.9 7 2.9s7-1.3 7-2.9"/></svg></span></span>
-          <div class="dn">Data</div><div class="dt ms">Mastery</div>
+          <div class="medal" style="--base:#2f9e73;--lt:#5fc79b;--dk:#1c6b4c">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.6 20 12 16.4 6.4 20 8 13.4 3 9l6.4-.7z"/></svg>
+            <div class="ring"></div><div class="bezel"></div>
+            <div class="face"><span class="glint"></span><svg class="emb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c3.9 0 7 1.3 7 2.9S15.9 9.3 12 9.3 5 8 5 6.4 8.1 3.5 12 3.5z"/><path d="M5 6.4v11.2c0 1.6 3.1 2.9 7 2.9s7-1.3 7-2.9V6.4"/><path d="M5 12c0 1.6 3.1 2.9 7 2.9s7-1.3 7-2.9"/></svg></div>
+          </div>
+          <div class="dn">Data</div><div class="dt" style="background:#2f9e73">Mastery</div>
         </div>
         <div class="badge">
-          <span class="coin gold tb"><span class="g1"></span><span class="g2"></span><span class="face"><svg class="emblem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16.3l9 5 9-5"/></svg></span></span>
-          <div class="dn">Tech Foundations</div><div class="dt tb">Trailblazer</div>
+          <div class="medal" style="--base:#c99a2e;--lt:#e8c869;--dk:#8f6b17">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.6 20 12 16.4 6.4 20 8 13.4 3 9l6.4-.7z"/></svg>
+            <div class="ring"></div><div class="bezel"></div>
+            <div class="face"><span class="glint"></span><svg class="emb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16.3l9 5 9-5"/></svg></div>
+          </div>
+          <div class="dn">Tech Foundations</div><div class="dt" style="background:#c99a2e">Trailblazer</div>
         </div>
         <div class="badge">
-          <span class="coin ms"><span class="g1"></span><span class="g2"></span><span class="face"><svg class="emblem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.2 3v5.1c0 4.7-3.2 7.9-7.2 9.3-4-1.4-7.2-4.6-7.2-9.3V5.8z"/><path d="M8.8 12.2l2.1 2.1 4.3-4.3"/></svg></span></span>
-          <div class="dn">Cyber</div><div class="dt ms">Mastery</div>
+          <div class="medal" style="--base:#7c5cc4;--lt:#a98ee0;--dk:#523a8f">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.6 20 12 16.4 6.4 20 8 13.4 3 9l6.4-.7z"/></svg>
+            <div class="ring"></div><div class="bezel"></div>
+            <div class="face"><span class="glint"></span><svg class="emb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.2 3v5.1c0 4.7-3.2 7.9-7.2 9.3-4-1.4-7.2-4.6-7.2-9.3V5.8z"/><path d="M8.8 12.2l2.1 2.1 4.3-4.3"/></svg></div>
+          </div>
+          <div class="dn">Cyber</div><div class="dt" style="background:#7c5cc4">Mastery</div>
         </div>
         <div class="badge">
-          <span class="coin gold tb"><span class="g1"></span><span class="g2"></span><span class="face"><svg class="emblem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="2.7"/><path d="M3.8 19c0-2.9 2.3-5.2 5.2-5.2s5.2 2.3 5.2 5.2"/><path d="M16 5.6a2.6 2.6 0 0 1 0 5.1"/><path d="M15.7 14.1c2.4.5 4.2 2.5 4.2 4.9"/></svg></span></span>
-          <div class="dn">Talent</div><div class="dt tb">Trailblazer</div>
+          <div class="medal" style="--base:#c46f8f;--lt:#e29db6;--dk:#8f4763">
+            <svg class="star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.6 20 12 16.4 6.4 20 8 13.4 3 9l6.4-.7z"/></svg>
+            <div class="ring"></div><div class="bezel"></div>
+            <div class="face"><span class="glint"></span><svg class="emb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="2.7"/><path d="M3.8 19c0-2.9 2.3-5.2 5.2-5.2s5.2 2.3 5.2 5.2"/><path d="M16 5.6a2.6 2.6 0 0 1 0 5.1"/><path d="M15.7 14.1c2.4.5 4.2 2.5 4.2 4.9"/></svg></div>
+          </div>
+          <div class="dn">Talent</div><div class="dt" style="background:#c46f8f">Trailblazer</div>
         </div>
       </div>
       <div class="badgenote"><b>A status both sides read instantly.</b> CIOs work toward it; PE partners recognise it at a glance. One shared language across the portfolio.</div>
